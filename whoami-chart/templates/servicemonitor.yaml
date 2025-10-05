@@ -20,4 +20,8 @@ spec:
     - port: {{ .Values.service.name }}
       interval: {{ .Values.serviceMonitor.interval }}
       path: {{ .Values.serviceMonitor.path }}
+  # В каком пространстве имен искать сервисы
+  namespaceSelector:
+    matchNames:
+      - {{ .Release.Namespace }}
 {{- end }}

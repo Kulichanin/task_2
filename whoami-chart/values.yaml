@@ -28,9 +28,6 @@ service:
   name: http
   port: 8080
   targetPort: 80
-  # # !Метки службы используются ServiceMonitor для обнаружения
-  # labels:
-  #   service: whoami
 
 # This block is for setting up the ingress for more information can be found here: https://kubernetes.io/docs/concepts/services-networking/ingress/
 ingress:
@@ -81,4 +78,3 @@ serviceMonitor:
   # !Дополнительные метки для селектора Prometheus
   additionalLabels:
     release: kube-prometheus-stack
-  
