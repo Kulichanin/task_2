@@ -4,6 +4,7 @@ metadata:
   name: {{ include "whoami-chart.fullname" . }}
   labels:
     {{- include "whoami-chart.labels" . | nindent 4 }}
+    service: whoami
 spec:
   type: {{ .Values.service.type }}
   ports:

@@ -15,6 +15,7 @@ spec:
       # !Эти метки должны совпадать с метками в service.metadata.labels.
       app.kubernetes.io/name: {{ include "whoami-chart.name" . }}
       app.kubernetes.io/instance: {{ .Release.Name }}
+      service: whoami
   endpoints:
     # !Должен совпадать с service.spec.ports[*].name
     - port: {{ .Values.service.name }}
